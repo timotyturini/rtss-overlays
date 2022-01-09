@@ -1,0 +1,476 @@
+[Master]
+Implementation=2
+FontFace=Consolas
+FontHeight=-13
+FontWeight=400
+ZoomRatio=1
+[Settings]
+Name=
+RefreshPeriod=1000
+EmbeddedImage=sample.png
+PingAddr=127.0.0.1
+[General]
+Sources=30
+Tables=1
+Layers=26
+[Source0]
+Name=CPU temperature
+Units=°C
+Format=
+Formula=
+Provider=HwInfo
+SensorInst=0
+ReadingType=1
+ReadingName=CPU Package,CPU (Tctl/Tdie)
+[Source1]
+Name=CPU fan
+Units=RPM
+Format=
+Formula=
+Provider=HwInfo
+SensorInst=0
+ReadingType=3
+ReadingName=CPU
+[Source2]
+Name=CPU1 usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=CPU1 usage
+[Source3]
+Name=CPU2 usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=CPU2 usage
+[Source4]
+Name=CPU3 usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=CPU3 usage
+[Source5]
+Name=CPU4 usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=CPU4 usage
+[Source6]
+Name=CPU5 usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=CPU5 usage
+[Source7]
+Name=CPU6 usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=CPU6 usage
+[Source8]
+Name=CPU7 usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=CPU7 usage
+[Source9]
+Name=CPU8 usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=CPU8 usage
+[Source10]
+Name=CPU9 usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=CPU9 usage
+[Source11]
+Name=CPU10 usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=CPU10 usage
+[Source12]
+Name=CPU11 usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=CPU11 usage
+[Source13]
+Name=CPU12 usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=CPU12 usage
+[Source14]
+Name=CPU usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=CPU usage
+[Source15]
+Name=RAM usage
+Units=GB
+Format=%.2f
+Formula=x / 1024
+Provider=HAL
+ID=RAM usage
+[Source16]
+Name=RAM usage percent
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=RAM usage percent
+[Source17]
+Name=RAM usage \ process
+Units=GB
+Format=%.2f
+Formula=x / 1024
+Provider=HAL
+ID=RAM usage \ process
+[Source18]
+Name=RAM usage percent \ process
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=RAM usage percent \ process
+[Source19]
+Name=Ping
+Units=ms
+Format=
+Formula=
+Provider=HAL
+ID=Ping
+[Source20]
+Name=GPU1 temperature
+Units=°C
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 temperature
+[Source21]
+Name=GPU1 fan speed
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 fan speed
+[Source22]
+Name=GPU1 usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 usage
+[Source23]
+Name=GPU1 power
+Units=W
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 power
+[Source24]
+Name=GPU1 memory usage
+Units=GB
+Format=%.2f
+Formula=x / 1024
+Provider=HAL
+ID=GPU1 memory usage
+[Source25]
+Name=GPU1 memory usage percent
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 memory usage percent
+[Source26]
+Name=GPU1 memory usage \ process
+Units=GB
+Format=%.2f
+Formula=x / 1024
+Provider=HAL
+ID=GPU1 memory usage \ process
+[Source27]
+Name=GPU1 memory usage percent \ process
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 memory usage percent \ process
+[Source28]
+Name=AnimationTimer
+Units=ms
+Format=
+Formula=("GPU1 fan speed" * x / 660) % 9
+Provider=HAL
+ID=Timer
+[Source29]
+Name=GPU1 fan tachometer
+Units=RPM
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 fan tachometer
+[Table0]
+Name=SampleTable
+ValueSize=50
+Lines=2
+Line0Name=HDD1
+Line0Cells=3
+Line0Cell0Source=HDD1 usage
+Line0Cell1Source=HDD1 read rate
+Line0Cell2Source=HDD1 write rate
+Line1Name=NET1
+Line1Cells=3
+Line1Cell0Text=
+Line1Cell1Source=NET1 download rate
+Line1Cell2Source=NET1 upload rate
+[Layer0]
+Name=
+Text=<G=GPU1 temperature,0,0,1,0,100,11>
+PositionX=-131
+PositionY=0
+ExtentX=-10
+ExtentY=-1
+ExtentOrigin=0
+TextColor=5B00FF00
+[Layer1]
+Name=
+Text=<G=Frametime,0,0,1,0,100,10>
+PositionX=-193
+PositionY=0
+ExtentX=-26
+ExtentY=-1
+ExtentOrigin=0
+TextColor=80FF8080
+[Layer2]
+Name=
+Text=<FR>
+PositionX=-264
+PositionY=0
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=4
+Size=115
+TextColor=0000FF00
+[Layer3]
+Name=
+Text=<FT>ms
+PositionX=-185
+PositionY=0
+ExtentX=-8
+ExtentY=-1
+ExtentOrigin=4
+TextColor=00FF8080
+[Layer4]
+Name=
+Text=<G=RAM usage percent,0,0,1,0,100,11>
+PositionX=-93
+PositionY=0
+ExtentX=-10
+ExtentY=-1
+ExtentOrigin=0
+TextColor=5B8080C0
+[Layer5]
+Name=
+Text=%RAM usage percent%%
+PositionX=-89
+PositionY=0
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=4
+TextColor=008080C0
+[Layer6]
+Name=
+Text=<G=GPU1 usage,0,0,1,0,100,11>
+PositionX=-112
+PositionY=0
+ExtentX=-10
+ExtentY=-1
+ExtentOrigin=0
+TextColor=5A00FF00
+[Layer7]
+Name=
+Text=<G=GPU1 memory usage percent,0,0,1,0,100,11>
+PositionX=-151
+PositionY=0
+ExtentX=-10
+ExtentY=-1
+ExtentOrigin=5
+TextColor=5B00FF00
+[Layer8]
+Name=
+Text=%GPU1 memory usage percent%%
+PositionX=-147
+PositionY=0
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=4
+TextColor=0000FF00
+[Layer9]
+Name=
+Text=%CPU usage%%
+PositionX=-70
+PositionY=0
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=4
+TextColor=00FF0000
+[Layer10]
+Name=
+Text=%GPU1 usage%%
+PositionX=-108
+PositionY=0
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=4
+TextColor=0000FF00
+[Layer11]
+Name=
+Text=%GPU1 temperature%°C
+PositionX=-127
+PositionY=0
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=4
+TextColor=0000FF00
+[Layer12]
+Name=
+Text=<G=CPU1 usage,7,-1,1,0,100,38><G=CPU2 usage><G=CPU3 usage><G=CPU4 usage><G=CPU5 usage><G=CPU6 usage><G=CPU7 usage><G=CPU8 usage><G=CPU9 usage><G=CPU10 usage><G=CPU11 usage><G=CPU12 usage>
+PositionX=-74
+PositionY=0
+ExtentX=-10
+ExtentY=-1
+ExtentOrigin=3
+TextColor=82FF0000
+[Layer13]
+Name=
+Text=RAM
+PositionX=-85
+PositionY=0
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=4
+FixedAlignment=1
+TextColor=828080C0
+[Layer14]
+Name=
+Text=CPU
+PositionX=-66
+PositionY=0
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=4
+TextColor=82FF0000
+[Layer15]
+Name=
+Text=GPU
+PositionX=-104
+PositionY=0
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=4
+TextColor=8200FF00
+[Layer16]
+Name=
+Text=TEMP
+PositionX=-123
+PositionY=0
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=4
+FixedAlignment=1
+TextColor=8200FF00
+[Layer17]
+Name=
+Text=VRAM
+PositionX=-142
+PositionY=0
+ExtentX=-5
+ExtentY=-1
+ExtentOrigin=4
+TextColor=8200FF00
+[Layer18]
+Name=
+Text=%GPU1 fan tachometer%
+PositionX=-166
+PositionY=0
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=4
+TextColor=0000FF00
+[Layer19]
+Name=
+Text=FAN
+PositionX=-162
+PositionY=0
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=4
+TextColor=8200FF00
+[Layer20]
+Name=
+Text=<G=GPU1 fan speed,0,0,1,0,100,11>
+PositionX=-170
+PositionY=0
+ExtentX=-10
+ExtentY=-1
+ExtentOrigin=0
+TextColor=5B00FF00
+[Layer21]
+Name=
+Text=FPS
+PositionX=-268
+PositionY=0
+ExtentX=-2
+ExtentY=-1
+ExtentOrigin=4
+[Layer22]
+Name=
+Text=FTIME
+PositionX=-181
+PositionY=0
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=4
+TextColor=82FF8080
+[Layer23]
+Name=
+Text=
+PositionX=-284
+PositionY=0
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=0
+[Layer24]
+Name=
+Text=%Time24%
+PositionX=-276
+PositionY=0
+ExtentX=-8
+ExtentY=-1
+ExtentOrigin=4
+[Layer25]
+Name=
+Text=-
+PositionX=-273
+PositionY=0
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=4
